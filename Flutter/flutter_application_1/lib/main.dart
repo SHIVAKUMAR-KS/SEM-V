@@ -1,23 +1,116 @@
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(HelloWorldApp());
+// }
+
+// class HelloWorldApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text('Hello World App'),
+//         ),
+//         body: Center(
+//           child: Text(
+//             'Hello, World!',
+//             style: TextStyle(fontSize: 24, color: Colors.green),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(HelloWorldApp());
+  runApp(MyApp());
 }
 
-class HelloWorldApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Hello World App'),
+          title: Text('Custom Widget Example'),
         ),
-        body: Center(
-          child: Text(
-            'Hello, World!',
-            style: TextStyle(fontSize: 24, color: Colors.green),
-          ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CustomTextField(
+                hintText: 'Enter your name',
+                onChanged: (value) {
+                  print('Name changed: $value');
+                },
+              ),
+            ),
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CustomTextField(
+                hintText: 'Enter Email',
+                onChanged: (value) {
+                  print('Email changed: $value');
+                },
+              ),
+            ),
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CustomTextField(
+                hintText: 'Enter Roll Number',
+                onChanged: (value) {
+                  print('Roll Number changed: $value');
+                },
+              ),
+            ),
+            SizedBox(height: 20),
+            CustomButton(
+              text: 'Press Me',
+              onPressed: () {
+                print('Button pressed!');
+              },
+            ),
+          ],
         ),
+      ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  final String? text;
+  final VoidCallback? onPressed;
+
+  const CustomButton({Key? key, required this.text, required this.onPressed}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      child: Text(text!),
+    );
+  }
+}
+
+class CustomTextField extends StatelessWidget {
+  final String hintText;
+  final ValueChanged<String> onChanged;
+
+  const CustomTextField({Key? key, required this.hintText, required this.onChanged}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      onChanged: onChanged,
+      decoration: InputDecoration(
+        hintText: hintText,
+        border: OutlineInputBorder(),
       ),
     );
   }
