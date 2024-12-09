@@ -1,4 +1,5 @@
 //npx http-server
+//just keep open npx http-server and run node Test.js in another terminal
 
 const { Builder, By, Key, until } = require('selenium-webdriver');
 
@@ -7,7 +8,7 @@ async function testRegistrationForm() {
     let driver = await new Builder().forBrowser('chrome').build();
     try {
         // Navigate to the registration form
-        await driver.get('http://localhost:8080');
+        await driver.get('http://localhost:8081');
 
         // Enter username
         await driver.findElement(By.id('username')).sendKeys('student1');
