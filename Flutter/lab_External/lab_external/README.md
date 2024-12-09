@@ -1,16 +1,43 @@
-# lab_external
+// Define a main function, which is the entry point of a Dart program.
+void main() {
+  // Variables and data types
+  int myNumber = 10;
+  double myDouble = 3.14;
+  String myString = 'Hello World';
+  bool myBool = true;
 
-A new Flutter project.
+  // Printing variables
+  print('My number is: $myNumber');
+  print('My double is: $myDouble');
+  print('My string is: $myString');
+  print('My boolean is: $myBool');
 
-## Getting Started
+  // Basic arithmetic operations
+  int result = myNumber + 5;
+  print('Result of addition: $result');
 
-This project is a starting point for a Flutter application.
+  // Conditional statements
+  if (myBool) {
+    print('myBool is true');
+  } else {
+    print('myBool is false');
+  }
 
-A few resources to get you started if this is your first Flutter project:
+  // Loops
+  for (int i = 0; i < 5; i++) {
+    print('Iteration $i');
+  }
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  // Lists
+  List<int> numbers = [1, 2, 3, 4, 5];
+  print('First element of the list: ${numbers[0]}');
+  print('Length of the list: ${numbers.length}');
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  // Maps
+  Map<String, int> ages = {
+    'Kiran': 30,
+    'Raj': 25,
+    'Alekya': 35,
+  };
+  print('Kiran\'s age: ${ages['Kiran']}');
+}
