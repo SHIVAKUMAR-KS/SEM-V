@@ -59,3 +59,20 @@ int uni(int i, int j) {
     }
     return 0;
 }
+
+/*
+Enter the number of vertices: 5
+Enter the cost adjacency matrix:
+0 1 7 10 5
+1 0 3 0 0  
+7 3 0 4 0
+10 0 4 0 2
+5 0 0 2 0
+The edges of the minimum cost spanning tree are:
+1 edge (1, 2) = 1
+2 edge (4, 5) = 2
+3 edge (2, 3) = 3
+4 edge (3, 4) = 4
+
+Minimum cost = 10
+*/

@@ -72,3 +72,25 @@ int main()
         printf("--->%d", path[index][i]);
     }
 }
+
+/*
+Enter number of vertices:
+6
+Enter the cost matrix:
+0 2 4 0 0 0
+0 0 1 7 0 0
+0 0 0 0 3 0
+0 0 0 0 0 1
+0 0 0 2 0 5
+0 0 0 0 0 0
+Enter the number of paths:
+5
+Enter the possible paths:
+1 2 3 5 4 6
+1 2 3 5 6 0
+1 3 5 4 6 0
+1 2 4 6 0 0
+1 3 5 6 0 0
+Minimum cost: 9
+Minimum cost path: --->1--->2--->3--->5--->4--->6
+*/

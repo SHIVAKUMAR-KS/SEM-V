@@ -46,3 +46,23 @@ int main()
 
     return 0;
 }
+
+
+/*
+Enter window size: 3
+
+Enter number of frames to transmit: 5
+
+Enter 5 frames: 10 15 13 20 35 40
+
+With sliding window protocol the frames will be sent in the following manner (assuming no corruption of frames)
+
+After sending 3 frames at each stage, the sender waits for the acknowledgement sent by the receiver
+
+10 15 13
+Acknowledgement of above frames sent is received by sender
+
+20 35 
+Acknowledgement of above frames sent is received by sender
+PS D:\Sem-V\LAB\CN_LAB\Week_7> 
+*/

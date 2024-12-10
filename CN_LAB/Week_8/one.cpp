@@ -64,3 +64,30 @@ int main()
 
     return 0; 
 }
+
+
+/*
+Enter Bucket Size: 3
+
+Enter Output Rate: 1
+
+Enter number of packets coming at second 1: 2
+
+Enter 1 to continue or 0 to quit: 1
+
+Enter number of packets coming at second 2: 3
+
+Enter 1 to continue or 0 to quit: 1
+
+Enter number of packets coming at second 3: 4
+
+Enter 1 to continue or 0 to quit: 0
+Second   Received        Sent    Dropped         Remained
+1       2               1               0       1
+2       3               1               0       3
+3       4               1               3       3
+4       0               1               0       2
+5       0               1               0       1
+6       0               1               0       0
+PS D:\Sem-V\LAB\CN_LAB\Week_8> 
+*/

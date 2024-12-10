@@ -37,3 +37,12 @@ int main() {
     // Print the decrypted text
     puts(plain);
 }
+
+
+/*
+Enter plain text: shiva'
+Enter the encryption key: 10
+Encrypted text is: qjktc%
+Decrypted text is: shiva'
+PS D:\Sem-V\LAB\CN_LAB\Week_5> 
+*/
